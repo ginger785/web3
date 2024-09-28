@@ -20,6 +20,7 @@ a {
     background-color: #bc2c79;
     color: #e7e3e3;
     padding: 20px 0;
+    max-width: 960px;
 }
 
 .header-content {
@@ -63,24 +64,24 @@ a {
 }
 
 /* ССЫЛКА */
-.links-section ul {
+.menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-.links-section li {
+.menu li {
     margin-left: 20px;
 }
 
-.links-section a {
+.menu a {
     font-size: 20px;
     color: #fff;
     text-decoration: none;
 }
 
-.links-section a:hover {
+.menu a:hover {
     color: rgb(172, 21, 21);
 }
 
@@ -116,6 +117,7 @@ a {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    max-width: 960px;
 }
 
 .footer-content {
@@ -126,7 +128,7 @@ a {
 /* Меняем порядок элементов на мобильных устройствах */
 @media (min-width: 768px) {
     .data-table {
-        max-width: 960px;
+        max-width: 768px;
         order: 1;
     }
 
