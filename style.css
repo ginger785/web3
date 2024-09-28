@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    font-family: URW Chancery L, 'Times New Roman', Times, serif;
+    background-color: #e38bbf;
+    text-decoration: none;
+}
+
+a {
+    color: #bc2c79;
+}
+
+.content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/*  ШАПКА */
+.header {
+    background-color: #bc2c79;
+    color: #e7e3e3;
+    padding: 20px 0;
+}
+
+.header-content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ЛОГОТИП */
+.logo {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 60%;
+    background: url(logo-Photoroom.png);
+    background-size: auto 110px;
+}
+
+.logo img {
+    height: 30px;
+    margin-left: 7px;
+    float: none;
+    margin: 0;
+    position: absolute;
+}
+
+.site-title {
+    margin: 0;
+}
+
+.site-link a {
+    font-size: 20px;
+    color: #dad7d7;
+    text-decoration: none;
+}
+
+.site-link a:hover {
+    color: #c61f6a;
+}
+
+/* ССЫЛКА */
+.links-section ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.links-section li {
+    margin-left: 20px;
+}
+
+.links-section a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.links-section a:hover {
+    color: rgb(172, 21, 21);
+}
+
+/* ТАБЛИЧКА */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: solid 3px #0c0808;
+}
+
+.data-table th,
+.data-table td {
+    padding: 10px;
+    text-align: left;
+    border: solid 1px #384357;
+}
+
+.data-table th {
+    background-color: #bc2c79;
+    color: #fff;
+    grid-column: auto;
+    border: solid 1px #dad7d7;
+    text-align: left;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #bc2c79;
+}
+
+/* подвал */
+.footer {
+    background-color: #c61f6a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Меняем порядок элементов на мобильных устройствах */
+@media (min-width: 768px) {
+    .data-table {
+        max-width: 960px;
+        order: 1;
+    }
+
+    .data-table th {
+        font-size: medium;
+    }
+
+    .data-table td {
+        font-size: medium;
+    }
+
+    .links-section {
+        flex-direction: row;
+        max-width: 960px;
+        order: 2;
+    }
+
+    img {
+        max-width: 720px;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .content {
+        max-width: 960px;
+    }
+
+    .logo {
+        width: 120px;
+        float: left;
+        margin-bottom: 0px;
+        text-align: left;
+    }
+
+    .form-section {
+        order: 3;
+    }
+
+
+}
