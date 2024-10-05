@@ -1,3 +1,12 @@
+/* Сбрасываем все отступы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Включаем padding и границы в расчет ширины и высоты */
+
+}
+
 body {
     margin: 0;
     font-family: URW Chancery L, 'Times New Roman', Times, serif;
@@ -28,6 +37,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .header-cont {
@@ -64,6 +74,7 @@ a:hover {
     width: 100%;
     background-color: #e38bbf;
     margin-top: 1%;
+    box-sizing: border-box;
 }
 
 .menu a {
@@ -71,6 +82,7 @@ a:hover {
     padding: 10px;
     text-align: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .navcont {
@@ -122,6 +134,8 @@ a:hover {
 
 .table-container {
     order: 1;
+    overflow-x: auto;
+    /* Прокрутка для мобильных, если таблица слишком широкая */
 }
 
 .link-list {
@@ -134,6 +148,10 @@ a:hover {
     width: 100%;
     border-collapse: collapse;
     border: solid 3px #0c0808;
+    margin: 0 auto;
+    min-width: 1000px;
+    /* Минимальная ширина таблицы, для мобильных она будет прокручиваться */
+    box-sizing: border-box;
 }
 
 .data-table th,
@@ -141,6 +159,7 @@ a:hover {
     padding: 10px;
     text-align: left;
     border: solid 1px #384357;
+    box-sizing: border-box;
 }
 
 .data-table th {
@@ -171,6 +190,7 @@ footer {
     padding: 20px 0;
     text-align: left;
     width: 100%;
+    box-sizing: border-box;
 }
 
 /* Flex-контейнер для списка и таблицы */
