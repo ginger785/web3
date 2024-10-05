@@ -7,22 +7,36 @@ body {
 
 a {
     color: #bc2c79;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a:hover {
+    color: #000;
 }
 
 
-/*  ШАПКА */
-header {
+/*  Шапка */
+.header {
     background-color: #bc2c79;
     color: #e7e3e3;
     padding: 20px 0;
-}
-
-.header-content {
-    max-width: 960px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    background-color: #c61f6a;
+    flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+
+.header-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 960px;
+    padding: 0 20px;
 }
 
 /* ЛОГОТИП */
@@ -30,8 +44,7 @@ header {
     display: flex;
     width: 100px;
     height: 100px;
-    border-radius: 60%;
-    background: url(logo-Photoroom.png);
+    border-radius: 50%;
     background-size: auto 90px;
 }
 
@@ -43,44 +56,80 @@ header {
     position: absolute;
 }
 
-/* ГИТ */
-.site-title {
-    margin: 0;
-}
-
-.site-link a {
-    font-size: 20px;
-    color: #dad7d7;
-    text-decoration: none;
-}
-
-.site-link a:hover {
-    color: #c61f6a;
-}
-
-/* ССЫЛКА */
-.main-menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+/*Навигация*/
+.menu {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #e38bbf;
+    margin-top: 1%;
 }
 
-.main-menu li {
-    margin-left: 20px;
+.menu a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
 }
 
-.main-menu a {
-    font-size: 20px;
-    color: #fff;
+.navcont {
+    background-color: #e38bbf;
+    border: 2px solid #e38bbf;
+    background-repeat: 8px;
+    height: 40px;
+    padding-top: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 8px;
+    color: #dad7d7;
+    line-height: 2;
     text-decoration: none;
+    font-style: 15px;
 }
 
-.main-menu a:hover {
-    color: rgb(172, 21, 21);
+.navcont:hover {
+    background-color: #F4DBDB;
+    border: 2px solid #CD4662;
+    border-radius: 8px;
+    color: black;
 }
 
-/* ТАБЛИЧКА */
+.header-title {
+    font-weight: 500;
+    font-size: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+}
+
+
+.content {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+
+}
+
+/* Flex-контейнер для списка и таблицы */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* Ширина контейнера 100% */
+}
+
+.table-container {
+    order: 1;
+}
+
+.link-list {
+    order: 2;
+}
+
+
+/* Таблица */
 .data-table {
     width: 100%;
     border-collapse: collapse;
@@ -106,16 +155,67 @@ header {
     background-color: #bc2c79;
 }
 
+h2 {
+    background-color: #bc2c79;
+    padding-left: 25px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 15px;
+    margin: 20px;
+}
+
 /* подвал */
 footer {
     background-color: #c61f6a;
     color: #fff;
     padding: 20px 0;
     text-align: left;
-    max-width: 100%;
+    width: 100%;
 }
 
-footer.fcontent {
-    max-width: 100%;
-    margin: 0 auto;
+/* Flex-контейнер для списка и таблицы */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.table-container {
+    order: 1;
+}
+
+.link-list {
+    order: 2;
+}
+
+/* Стили для экранов больше 768px */
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu {
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: 20px;
+        background-color: transparent;
+        margin-top: 0;
+    }
+
+    .menu a {
+        width: auto;
+        padding: 15px 25px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .table-container {
+        order: 2;
+    }
+
+    .link-list {
+        order: 1;
+    }
 }
